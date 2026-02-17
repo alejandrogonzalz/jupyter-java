@@ -6,10 +6,10 @@ import java.util.stream.*;
  *
  * Usage in notebooks:
  * 1. Run: %load Debug.java
- * 2. Execute the cell to load the class
+ * 2. Execute the SAME cell again to load the class
  * 3. Use Debug.log() methods anywhere
  */
-public class Debug {
+class Debug {
     private static int indentLevel = 0;
 
     // ============ ARRAY LOGGING ============
