@@ -426,6 +426,49 @@ ImmutableList<String> list = ImmutableList.of("a", "b", "c");
 - Apache Commons (utilities)
 - Jsoup (HTML parsing)
 
+### Using the Debug Utility for LeetCode
+
+A zero-dependency `Debug` class is included for debugging algorithms:
+
+**Load in any notebook:**
+```java
+// Cell 1: Load the Debug class (in notebooks/ folder)
+%load Debug.java
+// Execute this cell, then execute it again to load
+
+// Cell 2: Use static import for clean syntax
+import static Debug.*;
+
+// Cell 3: Now use it!
+int[] nums = {1, 2, 3};
+log("Array", nums);  // No Debug. prefix needed!
+```
+
+**Features:**
+- ✅ Arrays: `log(nums)` or `log("Label", nums)`
+- ✅ 2D Arrays: `log(matrix)` with formatted rows
+- ✅ Collections: `log(list)`, `log(map)`, `log(set)`
+- ✅ Recursion: `enter()`, `step()`, `exit()` with indentation
+- ✅ Formatting: `separator()`, `header()`
+
+**Quick example:**
+```java
+class Solution {
+    int[] twoSum(int[] nums, int target) {
+        log("Input", nums);  // Clean syntax!
+        log("target = " + target);
+        // ... your solution
+    }
+}
+```
+
+**Example notebooks:**
+- `DebugUsage.ipynb` - How to load and use Debug class with static imports
+- `leetcode.ipynb` - Complete LeetCode examples with:
+  * Two Sum, Binary Search, Fibonacci
+  * Matrix Rotation, Permutations
+  * All using Debug utilities
+
 ---
 
 ## Troubleshooting
